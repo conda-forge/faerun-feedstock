@@ -5,7 +5,7 @@ Home: https://pypi.org/project/faerun/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A python package for generating interactive views of chemical spaces.
 
