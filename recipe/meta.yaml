@@ -1,5 +1,5 @@
 {% set name = "faerun" %}
-{% set version = "0.3.20" %}
+{% set version = "0.4.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 074a2b8956db3042ea70c58d58f0d8d703027ea2d72c3eec8907c5603b68f6e7
+  sha256: 0a2b5ad2157f28eea09bac977d1219b106648e6ad47442eedc5f0b1b7d3cea90
 
 build:
   number: 0
