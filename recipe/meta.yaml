@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 074a2b8956db3042ea70c58d58f0d8d703027ea2d72c3eec8907c5603b68f6e7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.0
+    - python {{ python_min }}
   run:
     - cherrypy >=18.1.0
     - colour >=0.1.5
@@ -26,7 +26,7 @@ requirements:
     - matplotlib-base >=3.0.2
     - numpy >=1.15.4
     - pandas >=0.24.2
-    - python >=3.0
+    - python >={{ python_min }}
     - ujson >=1.35
 
 test:
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/faerun/
