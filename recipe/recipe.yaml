@@ -1,0 +1,53 @@
+context:
+  name: faerun
+  version: 0.3.20
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 074a2b8956db3042ea70c58d58f0d8d703027ea2d72c3eec8907c5603b68f6e7
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - cherrypy >=18.1.0
+    - colour >=0.1.5
+    - jinja2 >=2.10
+    - matplotlib-base >=3.0.2
+    - numpy >=1.15.4
+    - pandas >=0.24.2
+    - python >=${{ python_min }}
+    - ujson >=1.35
+
+tests:
+  - python:
+      imports:
+        - faerun
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: A python package for generating interactive views of chemical spaces.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://pypi.org/project/faerun/
+
+extra:
+  recipe-maintainers:
+    - hadim
