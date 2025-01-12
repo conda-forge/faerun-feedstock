@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - cherrypy >=18.1.0
     - colour >=0.1.5
