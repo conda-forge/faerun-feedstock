@@ -1,6 +1,6 @@
 context:
   name: faerun
-  version: 0.4.6
+  version: "0.4.7"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 03ba3ea3419daf923e2f1c3190465926f8a9af9cbf5625d652cb0c4103bfd772
+  sha256: 1dcc06197b7d3dd990dd781277cf46bf2293b94a6291624a5f8c5a346ec4f906
 
 build:
   number: 0
