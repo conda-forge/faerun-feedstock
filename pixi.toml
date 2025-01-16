@@ -3,10 +3,10 @@
 # -*- mode: toml -*-
 
 [project]
-name = "tmpv1kn4rj2"
-version = "3.45.1"
-description = "Pixi configuration for conda-forge/tmpv1kn4rj2"
-authors = ["@conda-forge/t"]
+name = "faerun-feedstock"
+version = "3.45.2"
+description = "Pixi configuration for conda-forge/faerun-feedstock"
+authors = ["@conda-forge/faerun"]
 channels = ["conda-forge"]
 platforms = ['linux-64', 'osx-64', 'win-64']
 
